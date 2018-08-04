@@ -428,23 +428,44 @@ input[type=text] {
     font-weight: bold;
 }
 
-
-
-
-
-
-
 /* Footer */
 
 footer {
     height: 120px;
 }
 
+.footer-left {
+    width: 403px;
+    height: 18px;
+    font-size: 15px;
+    margin-top: 50px;
+    padding-right: 150px;
+    text-align: center;
+    color: rgb(164,168,188);
+}
 
+.footer-right {
+    width: 403px;
+    height: 18px;
+    font-size: 15px;
+    margin-top: 50px;
+    padding-left: 100px;
+    text-align: center;
+}
 
+.footer-right ul {
+    list-style-type: none;
+}
 
+.footer-right ul li {
+    display: inline-block;
+}
 
-
+.footer-right ul li a {
+    text-decoration: none;
+    color: rgb(164,168,188);
+    padding: 25px
+}
 
 
 
