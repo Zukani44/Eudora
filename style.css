@@ -21,7 +21,11 @@ section{
     flex-direction: column;
 }
 
-/* header */
+.float-left {
+    float: left;
+}
+
+/* Header */
 
 header {
     width: 100%;
@@ -117,6 +121,180 @@ nav {
     font-weight: bold;
 }
 
+/* First category */
+
+.first-category h1 {
+    width: 1240px;
+    height: 90px;
+    margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 70px;
+    letter-spacing: 1px;
+    color: rgb(110,116,152);
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-style: italic;;  
+    text-align: center;
+    border-bottom: 1px solid rgb(229,146,5);
+}
+
+.first-category h1 span {
+    background: #fff;
+    padding: 0 30px;
+    position: relative;
+    top: 35px;
+}
+
+.first-category p {
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 846px;
+    height: 100px;
+    font-size: 24px;
+    line-height: 48px;
+    color: rgb(164,168,188);
+    font-family: "Raleway";
+    text-align: center;
+}
+
+.first-category-buttons {
+    width: 760px;
+    margin: 0 auto;
+    
+}
+
+.first-category button {
+    margin: 95px 35px;
+    width: 180px;
+    height: 60px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: "Helvetica";
+    font-weight: bold;
+}
+
+.first-category button:hover {
+    cursor: pointer;
+}
+
+.gray-button {
+    color: rgb(110,116,152);
+    border: 1px solid rgb(110,116,152);
+    background: transparent;
+}
+
+.yelow-button {
+    color: rgb(255, 255, 255);
+    background: rgb(229,146,5);
+    border: 1px solid rgb(229,146,5);
+}
+
+
+.meals-box {
+    margin: 50px auto;
+    min-height: 500px;
+}
+
+.meals-box img {
+    width: 100%;
+}
+
+.meal-box {
+    width: 175px;
+    height: 175px;
+    text-align: center;
+    margin: 0 35px;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid rgb(255, 255, 255);
+    -webkit-box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.35);
+    box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.35);
+}
+
+.meal-box-big {
+    width: 255px;
+    height: 255px;
+    vertical-align: -1798%;
+    padding: 10px;
+    margin: 0 35px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid rgb(255, 255, 255);
+    -webkit-box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.35);
+    box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.35);
+}
+
+.meal-box .gray-button {
+    margin-top: 86px ;
+    font-size: 18px;
+    width: 168px;
+    height: 52px;
+    margin-left: -7px;
+}
+
+.meal-box-big h2 {
+    margin-top: 40px;
+    font-size: 72px;
+    letter-spacing: 1px;
+    color: rgb(229,146,5);
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-style: italic;;
+}
+
+.meal-box-big h3 {
+    margin-top: 45px;
+    font-size: 21px;
+    color: rgb(0,0,0);
+    font-family: "Raleway";
+    text-align: center;
+}
+
+.meal-box-big p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 233px;
+    font-size: 18px;
+    line-height: 48px;
+    color: rgb(164,168,188);
+    font-family: "Raleway";
+    text-align: center;
+}
+
+/* Breakfast */
+
+.breakfast {
+    margin-top: 300px;
+    text-align: center;
+}
+
+.breakfast-left {
+    height: 440px;
+    background: rgb(229,146,5);
+}
+
+.breakfast-left h1 {
+    margin-top: 6vw;
+    margin-left: 12vh;
+    width: 300px;
+    font-size: 56px;
+    letter-spacing: 1px;
+    color: rgb(255,255,255);
+    text-align: left;
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-style: italic;
+}
+
+.breakfast-right {
+    height: 440px;
+    background-image: url("img/breakfast.png");
+    background-position: center;
+}
 
 
 
