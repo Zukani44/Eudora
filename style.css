@@ -1,138 +1,39 @@
 /* Utilities */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     background-color: #fff;
-    font-size: 18px;
 }
 
 section{
-    width: 100%;
     min-height: 400px;
-    margin: 0 auto;
-    position: relative;
-    clear: both;
     display: flex;
+    
     flex-direction: column;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .float-left {
     float: left;
 }
 
-/* Header */
-
-header {
-    width: 100%;
-    min-height: 1058px;
-    text-align: center;
-    background-image: url("img/header-background.png");
-    background-position: center;
-    margin-bottom: 15vh;
-}
-
-nav {
-    height: 23vh;
-    background-color: rgb(0, 0, 0, 50%);
-}
-
-.navbar li a {
-    line-height: 21vh;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: rgb(255,255,255);
-    font-family: "Raleway";
-    font-weight: bold;
-}
-
-.navbar li a:hover {
-    color: rgb(229,146,5);
-}
-
-.logo {
-    vertical-align: -9%;
-    font-size: 72px;
-    letter-spacing: 1px;
-    color: rgb(229,146,5);
-    font-family: "Playfair Display";
-    font-weight: bold;
-    text-transform: none;
-}
-
-.header-info {
-    margin-top: 35vh;
-    font-size: 38px;
-    letter-spacing: 1px;
-    color: rgb(255,255,255);
-    font-family: "Playfair Display";
-    font-weight: bold;
-    font-style: italic;
-}
-
-.orange {
-    color: rgb(229,146,5);
-    font-family: "Playfair Display";
-    font-weight: bold;
-    font-style: italic;
-}
-    
-.header-info p {
-    padding-top: 25px;
-    width: 680px;
-    height: 76px;
-    line-height: 35px;
-    margin: 0 auto;
-    font-size: 22px;
-    font-weight: 300;
-    color: rgb(255,255,255);
-    font-family: "Raleway";
-    text-align: center;
-}
-
-.header-button {
-    margin-top: 13vh;
-    text-transform: uppercase;
-    color: rgb(255, 255, 255);
-    background: transparent;
-    border: 2px solid rgb(255, 255, 255);
-}
-
-.header-button:hover {
-    border: 2px solid rgb(229,146,5);
-    cursor: pointer;
-}
-
-.header-button:hover p {
-    color: rgb(229,146,5);
-}
-
-.header-button p {
-    padding: 10px 34px;
-    font-size: 20px;
-    line-height: 48px;
-    color: rgb(255,255,255);
-    font-family: "Helvetica";
-    font-weight: bold;
-}
-
-/* First category */
-
-.first-category {
-    min-height: 1400px;
+.chapter {
+    margin-top: 10vh;
+    margin-bottom: 50px;
 }
 
 .chapter h1 {
-    width: 1240px;
+    width: 85vw;
     height: 90px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     font-size: 70px;
     letter-spacing: 1px;
     color: rgb(110,116,152);
@@ -154,7 +55,7 @@ nav {
     margin-top: 90px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
+    
     width: 846px;
     height: 100px;
     font-size: 24px;
@@ -164,10 +65,119 @@ nav {
     text-align: center;
 }
 
-.first-category-buttons {
-    width: 760px;
+/* Header */
+
+header {
+    min-height: 100vh;
+    text-align: center;
+    background-image: url("img/header-background.png");
+    background-position: center;
+}
+
+nav {
+    height: 23vh;
+    background-color: rgb(0, 0, 0, 50%);
+}
+
+nav ul {
     margin: 0 auto;
+    padding-left: 0;
+}
+
+nav li a {
+    line-height: 23vh;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255,255,255);
+    font-family: "Raleway";
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+nav li a:hover {
+    color: rgb(229,146,5);
+    text-decoration: none;
+}
+
+.logo {
+    vertical-align: -9%;
+    font-size: 72px;
+    letter-spacing: 1px;
+    color: rgb(229,146,5);
+    font-family: "Playfair Display";
+    font-weight: bold;
+    text-transform: none;
+}
+
+.header-info {
+    margin-top: 20vh;
+    font-size: 38px;
+    letter-spacing: 1px;
+    color: rgb(255,255,255);
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-style: italic;
+}
+
+.orange {
+    color: rgb(229,146,5);
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-style: italic;
+}
     
+.header-info p {
+    padding-top: 25px;
+    width: 680px;
+    min-height: 76px;
+    line-height: 35px;
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: 300;
+    color: rgb(255,255,255);
+    font-family: "Raleway";
+    text-align: center;
+}
+
+.header-button {
+    margin-top: 13vh;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    transition: .3s ease-in-out;
+}
+
+.header-button:hover {
+    border: 2px solid rgb(229,146,5);
+    cursor: pointer;
+}
+
+.header-button:hover p {
+    color: rgb(229,146,5);
+}
+
+.header-button p {
+    margin-bottom: 0;
+    padding: 10px 34px;
+    font-size: 20px;
+    line-height: 48px;
+    color: rgb(255,255,255);
+    font-family: "Helvetica";
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+/* First category */
+
+.first-category {
+    min-height: 1400px;
+}
+
+.first-category-buttons {
+    margin: 0 auto;
 }
 
 .first-category button {
@@ -196,21 +206,17 @@ nav {
     border: 1px solid rgb(229,146,5);
 }
 
+/* ----------------------------------------------- */
 
-.meals-box {
-    margin: 120px auto;
-    min-height: 500px;
-}
-
-.meals-box img {
-    width: 100%;
+.order {
+    margin-top: 22vh;
+    margin-bottom: 10vh;
+    text-align: center;
 }
 
 .meal-box {
-    width: 175px;
-    height: 175px;
+    width: 100%;
     text-align: center;
-    margin: 0 35px;
     padding: 10px;
     display: inline-block;
     border: 1px solid rgb(255, 255, 255);
@@ -219,32 +225,25 @@ nav {
     box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.35);
 }
 
-.meal-box-big {
-    width: 255px;
-    height: 255px;
-    vertical-align: -1686%;
-    padding: 10px;
-    margin: 0 35px;
-    text-align: center;
-    display: inline-block;
-    border: 1px solid rgb(255, 255, 255);
-    -webkit-box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.35);
-    -moz-box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.35);
-    box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.35);
+.meal-up {
+    margin-top: 15vh;
 }
 
-
-
-
-.meal-box .gray-button {
-    margin-top: 86px ;
-    font-size: 18px;
-    width: 168px;
-    height: 52px;
-    margin-left: -7px;
+.order img {
+    width: 100%;
 }
 
-.meal-box-big h2 {
+.order button {
+    width: 90%;
+    margin: 50px 5%;
+    font-size: 20px;
+}
+
+.order .bigger-button {
+    width: 55%;
+}
+
+.order h2 {
     margin-top: 40px;
     font-size: 72px;
     letter-spacing: 1px;
@@ -254,17 +253,17 @@ nav {
     font-style: italic;;
 }
 
-.meal-box-big h3 {
+.order h3 {
     margin-top: 45px;
+    margin-bottom: 20px;
     font-size: 21px;
     color: rgb(0,0,0);
     font-family: "Raleway";
     text-align: center;
 }
 
-.meal-box-big p {
-    margin-top: 10px;
-    margin-bottom: 2px;
+.order p {
+    margin: 0 auto;
     width: 233px;
     font-size: 17px;
     line-height: 37px;
@@ -484,47 +483,3 @@ footer {
 
 /* RWD */
 
-@media (max-width: 767px) {
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
-}
-
-@media(min-width: 768px) and (max-width: 991px) {
-    .col-m-1 {width: 8.33%;}
-    .col-m-2 {width: 16.66%;}
-    .col-m-3 {width: 25%;}
-    .col-m-4 {width: 33.33%;}
-    .col-m-5 {width: 41.66%;}
-    .col-m-6 {width: 50%;}
-    .col-m-7 {width: 58.33%;}
-    .col-m-8 {width: 66.66%;}
-    .col-m-9 {width: 75%;}
-    .col-m-10 {width: 83.33%;}
-    .col-m-11 {width: 91.66%;}
-    .col-m-12 {width: 100%;}
-}
-
-@media(min-width: 992px) {
-    .col-1 { width: 8.33%; }
-    .col-2 { width: 16.66%; }
-    .col-3 { width: 25%; }
-    .col-4 { width: 33.33%; }
-    .col-5 { width: 41.66%; }
-    .col-6 { width: 50%; }
-    .col-7 { width: 58.33%; }
-    .col-8 { width: 66.66%; }
-    .col-9 { width: 75%; }
-    .col-10 { width: 83.33%; }
-    .col-11 { width: 91.66%; }
-    .col-12 { width: 100%; }
-}

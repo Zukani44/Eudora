@@ -9,13 +9,16 @@
 
     <title>Eudora</title>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
+
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Raleway:300i,400,700" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="navbar">
+        <div class="container-fluid">
+            <nav>
                 <ul>
                     <li>
                         <a href="#"> menu</a>
@@ -25,50 +28,86 @@
                         <a href="#">contact</a>
                     </li>
                 </ul>
+            </nav>
+            <div class="header-info">
+                <h2>Eudora is <span class="orange">simple</span> psd template</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-        </nav>
-        <div class="header-info">
-            <h2>Eudora is <samp class="orange">simple</samp> psd template</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="header-button">
+                <p>learn more</p>
+            </button>
         </div>
-        <button class="header-button">
-            <p>learn more</p>
-        </button>
     </header>
+
     <section class="first-category">
-        <div class="chapter">
-            <h1><span>Lorem ipsum dolor sit amet</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="container-fluid">
+            <div class="chapter">
+                <h1><span>Lorem ipsum dolor sit amet</span></h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="row">
+                <div class="first-category-buttons">
+                    <button class="gray-button">deserts</button>
+                    <button class="yelow-button">meats</button>
+                    <button class="gray-button">salads</button>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4 col-lg-4 order">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="meal-box meal-up">
+                                <img src="img/meal-1.png">
+                            </div>
+                            <button class="gray-button">learn more</button>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="meal-box meal-up">
+                                <img src="img/meal-2.png">
+                            </div>
+                            <button class="gray-button">learn more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 order">
+                    <div class="meal-box">
+                        <img src="img/meal-3.png">
+                    </div>
+                    <h2>34$</h2>
+                    <h3>Lorem ipsum name</h3>
+                    <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="gray-button bigger-button">order now</button>
+                </div>
+
+                <div class="col-md-4 col-lg-4 order">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="meal-box meal-up">
+                                <img src="img/meal-4.png">
+                            </div>
+                            <button class="gray-button">learn more</button>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="meal-box meal-up">
+                                <img src="img/meal-5.png">
+                            </div>
+                            <button class="gray-button">learn more</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="first-category-buttons">
-            <button class="gray-button">deserts</button>
-            <button class="yelow-button">meats</button>
-            <button class="gray-button">salads</button>
-        </div>
+        
+
         <div class="meals-box">
-            <div class="meal-box">
-                <img src="img/meal-1.png">
-                <button class="gray-button">learn more</button>
-            </div>
-            <div class="meal-box">
-                <img src="img/meal-2.png">
-                <button class="gray-button">learn more</button>
-            </div>
-            <div class="meal-box-big">
-                <img src="img/meal-3.png">
-                <h2>34$</h2>
-                <h3>Lorem ipsum name</h3>
-                <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button class="gray-button">order now</button>
-            </div>
-            <div class="meal-box">
-                <img src="img/meal-4.png">
-                <button class="gray-button">learn more</button>
-            </div>
-            <div class="meal-box">
-                <img src="img/meal-5.png">
-                <button class="gray-button">learn more</button>
-            </div>
+            
+            
+
         </div>
     </section>
     <section class="breakfast">
