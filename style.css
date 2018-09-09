@@ -7,7 +7,6 @@ body {
 section{
     min-height: 400px;
     display: flex;
-    
     flex-direction: column;
 }
 
@@ -21,8 +20,10 @@ section{
     margin-left: 0;
 }
 
-.float-left {
-    float: left;
+button:focus {
+    -webkit-outline: none;
+    -moz-outline: none;
+    outline: none;
 }
 
 .chapter {
@@ -55,7 +56,6 @@ section{
     margin-top: 90px;
     margin-left: auto;
     margin-right: auto;
-    
     width: 846px;
     height: 100px;
     font-size: 24px;
@@ -65,7 +65,7 @@ section{
     text-align: center;
 }
 
-/* Header */
+/* Header *******************************************************/
 
 header {
     min-height: 100vh;
@@ -143,6 +143,7 @@ nav li a:hover {
 
 .header-button {
     margin-top: 13vh;
+    margin-bottom: 5vh;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     background: transparent;
@@ -170,7 +171,7 @@ nav li a:hover {
     transition: .3s ease-in-out;
 }
 
-/* First category */
+/* First category ********************************************************/
 
 .first-category {
     min-height: 1400px;
@@ -188,10 +189,23 @@ nav li a:hover {
     font-size: 22px;
     font-family: "Helvetica";
     font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+.first-category button p {
+    margin-bottom: 0;
+    width: 100%;
+    color: rgb(110,116,152);
+    transition: .3s ease-in-out;
 }
 
 .first-category button:hover {
     cursor: pointer;
+    border: 1px solid rgb(229,146,5);
+}
+
+.first-category button:hover p {
+    color: rgb(229,146,5);
 }
 
 .gray-button {
@@ -272,12 +286,7 @@ nav li a:hover {
     text-align: center;
 }
 
-/* Breakfast */
-
-.breakfast {
-    
-    text-align: center;
-}
+/* Breakfast *******************************************************/
 
 .breakfast-left {
     height: 440px;
@@ -285,8 +294,9 @@ nav li a:hover {
 }
 
 .breakfast-left h1 {
-    margin-top: 6vw;
-    margin-left: 12vh;
+    margin: 24% auto;
+    width: 64%;
+    font-size: 56px;
     width: 300px;
     font-size: 56px;
     letter-spacing: 1px;
@@ -303,22 +313,19 @@ nav li a:hover {
     background-position: center;
 }
 
-/* Third category */
+/* Third category *******************************************************/
 
-.third-category .chapter {
-    margin-top: 11vh;
+.menu-margines {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
 }
 
 .menu-box {
-    width: 90%;
-    margin-top: 5vh;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5vh;
     text-align: center;
 }
 
 .dish img {
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -348,27 +355,36 @@ nav li a:hover {
     font-weight: bold;
     padding: 10px 30px;
     text-transform: uppercase;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.dish .gray-button:hover {
+    border: 1px solid rgb(229,146,5);
+    color: rgb(229,146,5);
 }
 
 .dish-empty {
     height: 150px;
 }
 
-/* Subscribe */
+/* Subscribe *******************************************************/
 
 .subscribe {
-    margin-top: 100px;
+    margin-top: 15vh;
 }
 
 .subscribe-panel {
-    width: 100%;
     height: 550px;
     background-image: url("img/subscribe.png");
     background-position: center;
+    background-attachment: fixed;
 }
 
 .subscribe-panel h1 {
-    margin-top: 100px;
+    width: 690px;
+    padding-top: 100px;
+    margin: 0 auto;
     font-size: 57px;
     letter-spacing: 1px;
     color: rgb(255,255,255);
@@ -382,18 +398,24 @@ form {
     width: 550px;
     height: 60px;
     margin: 0 auto;
+    margin-top: 65px;
 }
 
-input[type=text] {
+.sub-input {
     width: 550px;
     height: 60px;
-    margin-top: 65px;
+    color: rgb(255, 255, 255);
     box-sizing: border-box;
     border: 2px solid rgb(255,255,255);
     font-size: 16px;
     background-color: transparent;
     text-align: center;
-    
+}
+
+.sub-input:focus {
+    -webkit-outline: none;
+    -moz-outline: none;
+    outline: none;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -410,13 +432,12 @@ input[type=text] {
 }
 
 .subscribe-click {
-    margin: 0 auto;
+    margin: 90px auto;
     width: 165px;
     height: 55px;
 }
 
 .subscribe-click button {
-    margin-top: 140px;
     margin-left: auto;
     margin-right: auto;
     width: 165px;
@@ -425,61 +446,44 @@ input[type=text] {
     line-height: 48px;
     color: rgb(255,255,255);
     font-weight: bold;
+    cursor: pointer;
+    transition: .2s ease-in-out;
 }
 
-/* Footer */
-
-footer {
-    height: 120px;
+.subscribe-click button:active {
+    -webkit-box-shadow: 2px 0px 35px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 0px 35px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 0px 35px 0px rgba(0,0,0,0.75);
+    transform: scale(.9);
 }
+
+
+/* Footer *******************************************************/
 
 .footer-left {
-    width: 403px;
-    height: 18px;
     font-size: 15px;
-    margin-top: 50px;
-    padding-right: 150px;
-    text-align: center;
+    text-align: left;
     color: rgb(164,168,188);
 }
 
+.footer-left p {
+    margin-bottom: 0;
+    padding: 25px
+}
+
 .footer-right {
-    width: 403px;
-    height: 18px;
     font-size: 15px;
-    margin-top: 50px;
     padding-left: 100px;
-    text-align: center;
+    text-align: right;
+    padding-right: 50px;
 }
 
-.footer-right ul {
-    list-style-type: none;
-}
-
-.footer-right ul li {
+.footer-right a {
     display: inline-block;
-}
-
-.footer-right ul li a {
     text-decoration: none;
     color: rgb(164,168,188);
     padding: 25px
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* RWD */
 
