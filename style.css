@@ -6,8 +6,8 @@ body {
 
 section{
     min-height: 400px;
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
 }
 
 .container-fluid {
@@ -27,14 +27,13 @@ button:focus {
 }
 
 .chapter {
-    margin-top: 10vh;
-    margin-bottom: 50px;
+    margin: 10vh 0;
 }
 
 .chapter h1 {
-    width: 85vw;
-    height: 90px;
     margin: 0 auto;
+    min-height: 90px;
+    max-width: 57vw;
     font-size: 70px;
     letter-spacing: 1px;
     color: rgb(110,116,152);
@@ -42,22 +41,31 @@ button:focus {
     font-weight: bold;
     font-style: italic;;  
     text-align: center;
-    border-bottom: 1px solid rgb(229,146,5);
+    position:relative;
+    z-index: 2;
 }
 
-.chapter h1 span {
-    background: #fff;
-    padding: 0 30px;
-    position: relative;
-    top: 35px;
+.chapter h1::before, .chapter h1::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-top: 1px solid rgb(229,146,5);
+    width: 20%;
+    top: 50%;
+}
+
+.chapter h1::before {
+    left: -21%;
+}
+
+.chapter h1::after {
+    right: -21%;
 }
 
 .chapter p {
-    margin-top: 90px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 846px;
-    height: 100px;
+    margin: 10vh auto 0 auto;
+    width: 52%;
+    min-height: 100px;
     font-size: 24px;
     line-height: 48px;
     color: rgb(164,168,188);
@@ -109,6 +117,10 @@ nav li a:hover {
     font-family: "Playfair Display";
     font-weight: bold;
     text-transform: none;
+}
+
+.hidden-logo {
+    display: none;
 }
 
 .header-info {
@@ -177,31 +189,25 @@ nav li a:hover {
     min-height: 1400px;
 }
 
-.first-category-buttons {
-    margin: 0 auto;
+.button-holder {
+    text-align: center;
 }
 
 .first-category button {
-    margin: 30px 35px;
     width: 180px;
     height: 60px;
     text-transform: uppercase;
     font-size: 22px;
     font-family: "Helvetica";
     font-weight: bold;
-    transition: .3s ease-in-out;
-}
-
-.first-category button p {
-    margin-bottom: 0;
-    width: 100%;
-    color: rgb(110,116,152);
-    transition: .3s ease-in-out;
+    transition: .35s ease-in-out;
 }
 
 .first-category button:hover {
     cursor: pointer;
     border: 1px solid rgb(229,146,5);
+    color: rgb(229,146,5);
+    background: transparent;
 }
 
 .first-category button:hover p {
@@ -219,6 +225,8 @@ nav li a:hover {
     background: rgb(229,146,5);
     border: 1px solid rgb(229,146,5);
 }
+
+
 
 /* ----------------------------------------------- */
 
@@ -294,17 +302,16 @@ nav li a:hover {
 }
 
 .breakfast-left h1 {
-    margin: 24% auto;
-    width: 64%;
-    font-size: 56px;
-    width: 300px;
+    margin: 120px auto;
+    width: 270px;
+    height: 200px;
     font-size: 56px;
     letter-spacing: 1px;
     color: rgb(255,255,255);
-    text-align: left;
     font-family: "Playfair Display";
     font-weight: bold;
     font-style: italic;
+    display: block;
 }
 
 .breakfast-right {
@@ -315,13 +322,9 @@ nav li a:hover {
 
 /* Third category *******************************************************/
 
-.menu-margines {
-    margin-top: 15vh;
-    margin-bottom: 15vh;
-}
-
 .menu-box {
     text-align: center;
+    margin: 7vh auto;
 }
 
 .dish img {
@@ -375,7 +378,8 @@ nav li a:hover {
 }
 
 .subscribe-panel {
-    height: 550px;
+    border: 1px solid transparent;
+    min-height: 550px;
     background-image: url("img/subscribe.png");
     background-position: center;
     background-attachment: fixed;
@@ -402,7 +406,7 @@ form {
 }
 
 .sub-input {
-    width: 550px;
+    width: 100%;
     height: 60px;
     color: rgb(255, 255, 255);
     box-sizing: border-box;
@@ -431,15 +435,14 @@ form {
     color: rgb(255,255,255);
 }
 
-.subscribe-click {
+/*.subscribe-click {
     margin: 90px auto;
     width: 165px;
     height: 55px;
-}
+}*/
 
-.subscribe-click button {
-    margin-left: auto;
-    margin-right: auto;
+.subscribe button {
+    margin: 90px auto;
     width: 165px;
     height: 55px;
     font-size: 16px;
@@ -447,10 +450,11 @@ form {
     color: rgb(255,255,255);
     font-weight: bold;
     cursor: pointer;
+    display: block;
     transition: .2s ease-in-out;
 }
 
-.subscribe-click button:active {
+.subscribe button:active {
     -webkit-box-shadow: 2px 0px 35px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 0px 35px 0px rgba(0,0,0,0.75);
     box-shadow: 2px 0px 35px 0px rgba(0,0,0,0.75);
@@ -468,12 +472,11 @@ form {
 
 .footer-left p {
     margin-bottom: 0;
-    padding: 25px
+    padding: 25px 0 25px 25px;
 }
 
 .footer-right {
     font-size: 15px;
-    padding-left: 100px;
     text-align: right;
     padding-right: 50px;
 }
@@ -485,5 +488,141 @@ form {
     padding: 25px
 }
 
-/* RWD */
+/* RWD *******************************************************/
 
+@media only screen and (max-width: 576px) {
+
+    .chapter p {
+        margin: 6vh auto 0 auto;
+        font-size: 18px;
+        line-height: 37px;
+    }
+    
+    .button-holder button {
+        width: 100%;
+    }
+
+    .button-holder {
+        margin-bottom: 20px;
+    }
+
+    .dish p {
+        padding: 0;
+        line-height: 32px;
+    }
+
+    .menu-up {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* header */
+    nav {
+        height: 100%;
+    }
+
+    nav li a {
+        display: block;
+        line-height: 7vh;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .hidden-logo {
+        padding-top: 20px;
+        display: block;
+    }
+
+    .header-info {
+        margin-top: 7vh;
+    }
+
+    .header-info h2 {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .header-info p {
+        display: none;
+    }
+
+    /* first-category */
+
+    .chapter h1 {
+        font-size: 37px;
+        max-width: 65vw;
+    }
+
+    .chapter p {
+        width: 95%;
+    }
+
+    .order {
+        margin: 10vh auto 0 auto;
+    }
+
+    .meal-up {
+        margin-top: 5vh;
+    }
+
+    /* breakfast */
+
+    .breakfast {
+        margin-top: 5vh;
+    }
+
+    .breakfast-left {
+        position: absolute;
+        z-index: 1;
+        background: rgb(229,146,5, 0.4);
+    }
+
+    .breakfast-left h1 {
+        color: rgb(255, 255, 255);
+        text-shadow: 4px 4px 2px rgba(5, 5, 5, 1);
+    }
+
+    .breakfast-right {
+        position: relative;
+    }
+
+    /* third-category */
+
+    .menu-margines {
+        margin-top: 0;
+    }
+
+    /* subscribe */
+
+    .subscribe-panel h1 {
+        width: 94%;
+        font-size: 54px;
+    }
+    
+    form {
+        width: 80%;
+    }
+
+    /* subscribe */
+
+    .footer-left {
+        text-align: center;
+    }
+
+    .footer-left p {
+        padding: 25px 0 10px 0;
+    }
+
+    .footer-right {
+        padding-right: 15px;
+        text-align: center;
+    }
+
+    .footer-right a {
+        padding: 25px 10px;
+    }
+}
