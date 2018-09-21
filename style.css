@@ -194,7 +194,7 @@ nav li a:hover {
 }
 
 .first-category button {
-    width: 180px;
+    width: 100%;
     height: 60px;
     text-transform: uppercase;
     font-size: 22px;
@@ -624,5 +624,100 @@ form {
 
     .footer-right a {
         padding: 25px 10px;
+    }
+}
+
+/* iPad portrait */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+and (orientation : portrait) {
+
+    .chapter p {
+        margin: 3vh auto 0 auto;
+    }
+
+    .chapter h1::before, .chapter h1::after {
+        top: 29%;
+    }
+
+    .breakfast-left {
+        position: static;
+        z-index: 1;
+        background: rgb(229,146,5);
+        width: 100%;
+    }
+
+    .breakfast-left h1 {
+        width: 227px;
+        height: 200px;
+        font-size: 46px;
+        text-shadow: none;
+    }
+
+    .dish p {
+        line-height: 35px;
+    }
+}
+
+/* iPad landscape */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+and (orientation : landscape) {
+
+    .dish p {
+        padding: 10px 50px;
+        line-height: 29px;
+    }
+}
+
+/* iPad Pro */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px) {
+    
+    nav {
+        height: 15vh;
+    }
+
+    nav li a {
+        line-height: 15vh;
+    }
+
+}
+
+/* iPad Pro  portrait */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+    header {
+        background-image: url(img/header-big.png);
+    }
+
+    .chapter h1::before, .chapter h1::after {
+        top: 41%;
+    }
+
+    .order {
+        margin-top: 10vh;
+    }
+
+    .meal-up {
+        margin-top: 8vh;
+    }
+
+    .dish p {
+        line-height: 27px;
+        padding: 10px 52px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .chapter p {
+        width: 70%;
     }
 }
