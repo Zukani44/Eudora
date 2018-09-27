@@ -578,7 +578,7 @@ form {
     .breakfast-left {
         position: absolute;
         z-index: 1;
-        background: rgb(229,146,5, 0.4);
+        background: rgba(229,146,5, 0.4);
     }
 
     .breakfast-left h1 {
