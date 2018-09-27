@@ -84,7 +84,8 @@ header {
 
 nav {
     height: 23vh;
-    background-color: rgb(1, 1, 1, 50%);
+    background-color: rgb(1, 1, 1, 0.5);
+    filter: alpha(opacity=50);
 }
 
 nav ul {
